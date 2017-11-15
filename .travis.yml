@@ -5,3 +5,6 @@ jdk:
 
 after_success:
   - test $TRAVIS_BRANCH = "develop" && $TRAVIS_PULL_REQUEST = "false" && ./gradlew publish
+  
+notifications:
+    slack: gitwrecked:3wcHswSSh6YfU6Hqh0q9B6sR
