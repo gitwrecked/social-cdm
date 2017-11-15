@@ -4,7 +4,7 @@ jdk:
   - oraclejdk8
 
 after_success:
-  if [ "$TRAVIS_BRANCH" = "develop" ]; then ./gradlew publish; fi
+  if [ "$TRAVIS_BRANCH" = "develop" ] && [ "$TRAVIS_PULL_REQUEST" = "false" ]; then ./gradlew publish; fi
   
 notifications:
     slack: gitwrecked:3wcHswSSh6YfU6Hqh0q9B6sR
