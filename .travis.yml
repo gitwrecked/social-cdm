@@ -4,4 +4,4 @@ jdk:
   - oraclejdk8
 
 after_success:
-  ./gradlew publish
+  - test $TRAVIS_BRANCH = "develop" && $TRAVIS_PULL_REQUEST = "false" && ./gradlew publish
